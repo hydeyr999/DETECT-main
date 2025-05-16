@@ -1,0 +1,14 @@
+preprocess_strategy: light
+
+model:
+    backbone_path: "./models/Mistral-7B-v0.1"
+    lora_path: "./detectors/mistral/weights/cross-domain/mistral_xsum_ep4_thres0_n2000/best"
+    max_length: 512 #1296
+    num_labels: 1
+    tokenizer:
+        padding_side: left
+        truncation_side: left
+        use_fast: true
+
+predict_params:
+    per_device_eval_batch_size: 1
